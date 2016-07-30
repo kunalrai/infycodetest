@@ -4,6 +4,9 @@
   "description": "Simple Search application.",
   "main": "server.js",
   "author": "Kunal",
+  "scripts": {
+    "postinstall": "gulp web-dev"
+  },
   "dependencies": {
     "async": "^1.4.2",
     "body-parser": "^1.13.3",
@@ -66,9 +69,5 @@
   "devDependencies": {
     "gulp": "~3.9.1",
     "uglify-save-license": "~0.4.1"
-  },
-  "scripts": {
-  "start": "node server.js",
-  "postinstall": "gulp web-dev"
-}
+  }
 }
