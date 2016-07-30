@@ -6,17 +6,11 @@ var express = require('express');
 var expressSession = require('express-session');
 var cookieParser = require('cookie-parser');
 var app = express(); 						// create our app w/ express
-var mongoose = require('mongoose'); 				// mongoose for mongodb
 var port = process.env.PORT || 8080; 				// set the port
-var config = require('./server/config'); 			// load the database config
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
-// configuration ===============================================================
-mongoose.connect(config.database.modulusUrl, function () {
-	console.log("Connected to DB " + config.database.modulusUrl);
-}); 	// Connect to local MongoDB instance. A remoteUrl is also available (modulus.io)
 
 app.use(express.static(__dirname + '/' + staticdir));
 app.use(express.static('./client')); 		// set the static files location /public/img will be /img for users
@@ -26,17 +20,11 @@ app.use(bodyParser.json({ limit: '10000000', defer: true }));
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-Method-Override header in the request
 
-
-// routes ======================================================================
-
-
-
 require('./server/routes.js')(app);
 
 app.all('/*', function(req, res) {
     res.sendFile('index.html', { root: './'+staticdir }); // load the single view file (angular will handle the page changes on the front-end)
 });
-
 
 
 app.use(function (req, res, next) {
