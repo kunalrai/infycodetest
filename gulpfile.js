@@ -45,9 +45,6 @@ pipes.orderedVendorScripts = function() {
 
 pipes.orderedAppScripts = function() {
     return plugins.order([
-                          
-                          'modules/services/adminservice.js',
-                          'modulesjs/controllers/userCtrl.js',
                           'modules/controllers/searchCtrl.js',
                           'modules/services/search.js',
                           'modules/core.js',

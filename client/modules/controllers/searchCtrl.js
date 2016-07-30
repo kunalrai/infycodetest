@@ -16,7 +16,18 @@ angular.module('searchCtrl', [])
 					$scope.searchresult = data;
 				}
 			);
+			Todos.getGooglebookdata(q).success(
+				function (data) {
+					
+					$scope.loading = false;
+					$scope.bookresult = data;
+				}
+			);
 
+		}
+		$scope.reset = function(){
+				$("#result").html("");
+				 $('#search').val('');
 		}
 
 	}]);

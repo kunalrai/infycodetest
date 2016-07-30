@@ -20,6 +20,7 @@
     "event-stream": "^3.2.2",
     "express": "^4.10.6",
     "express-session": "~1.0.2",
+    "google-books-search": "^0.3.0",
     "gulp": "^3.8.10",
     "gulp-angular-filesort": "^1.1.1",
     "gulp-concat": "^2.4.3",

@@ -1,2 +1,2 @@
-var app = angular.module('search', ['ui.router','searchCtrl', 'searchService','adminService','userCtrl']);
+var app = angular.module('search', ['ui.router','searchCtrl', 'searchService']);
 
