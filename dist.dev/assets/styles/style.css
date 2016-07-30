@@ -1,0 +1,12 @@
+body {
+  padding-top: 70px; }
+
+footer {
+  margin: 50px 0; }
+
+.r {
+  text-decoration: underline;
+  font-size: 18px;
+  cursor: pointer;
+  color: #609;
+  white-space: nowrap; }

@@ -1,0 +1,140 @@
+<!doctype html>
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="search">
+
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Optimize mobile viewport -->
+    <title>Common Search Platform</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <!-- SCROLLS -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <!-- SPELLS -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angularjs-color-picker.css">
+    <link rel="stylesheet" href="bower_components/bootstrap-slider.css">
+    <link rel="stylesheet" href="bower_components/jasny-bootstrap.css">
+    <!-- endinject -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="assets/styles/form-elements.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <!-- endinject -->
+
+    <!-- SPELLS -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+
+</head>
+<!-- SET THE CONTROLLER -->
+
+<body>
+    <!-- HEADER -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Kunal Search Engine</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a ui-sref="home">Home</a></li>
+                    <li>
+                        <a ui-sref="about">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a ui-sref="contactus">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div ui-view></div>
+    <div class="all-bottom">
+        <div class="text-center text-muted">
+            <p>A demo by <a href="#">Kunal Rai</a>.</p>
+            <p>download source <a href="https://github.com/kunalrai/infycodetest">here</a>.</p>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Powered by &copy; Google 2016</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+    </div>
+    <div data-growl=""></div>
+
+
+    <!-- bower:js -->
+    <script src="bower_components/jquery.js"></script>
+    <script src="bower_components/angular.js"></script>
+    <script src="bower_components/angular-route.js"></script>
+    <script src="bower_components/angular-resource.js"></script>
+    <script src="bower_components/bootstrap.js"></script>
+    <script src="bower_components/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-ui-router.js"></script>
+    <script src="bower_components/ng-file-upload-shim.js"></script>
+    <script src="bower_components/ng-file-upload.js"></script>
+    <script src="bower_components/jasny-bootstrap.js"></script>
+    <script src="bower_components/scrollglue.js"></script>
+    <script src="bower_components/underscore.js"></script>
+    <script src="bower_components/angular-growl.js"></script>
+    <script src="bower_components/bootstrap-slider.js"></script>
+    <script src="bower_components/moment.js"></script>
+    <script src="bower_components/angular-sanitize.js"></script>
+    <script src="bower_components/angular-translate.js"></script>
+    <script src="bower_components/angular-translate-handler-log.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files.js"></script>
+    <script src="bower_components/angular-translate-loader-partial.js"></script>
+    <script src="bower_components/angular-cookies.js"></script>
+    <script src="bower_components/angular-translate-storage-cookie.js"></script>
+    <script src="bower_components/angular-translate-storage-local.js"></script>
+    <script src="bower_components/angularjs-color-picker.js"></script>
+    <script src="bower_components/dirPagination.js"></script>
+    <script src="bower_components/jquery.backstretch.js"></script>
+    <script src="bower_components/moment-timezone-with-data-2010-2020.js"></script>
+    <script src="bower_components/socket.js"></script>
+    <script src="bower_components/tinycolor.js"></script>
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="modules/services/adminservice.js"></script>
+    <script src="modules/controllers/searchCtrl.js"></script>
+    <script src="modules/services/search.js"></script>
+    <script src="modules/core.js"></script>
+    <script src="routes.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="modules/controllers/userCtrl.js"></script>
+    <!-- endinject -->
+
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+</body>
+
+</html>
