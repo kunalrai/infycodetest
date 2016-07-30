@@ -6,7 +6,7 @@
   "author": "Kunal",
   "scripts": {
     "start": "node server.js",
-    "postinstall": "bower install && gulp web-dev"
+    "postinstall": "bower install && gulp build-app-dev"
   },
   "dependencies": {
     "async": "^1.4.2",
