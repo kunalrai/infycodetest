@@ -24,14 +24,14 @@
             </div>
             <hr>
             <label>Youtube Search result</label>
-            <div id="results" ng-repeat="result in searchresult.items">
+            <div id="results" ng-repeat="result in searchresult">
                 <a href="//www.youtube.com/embed/{{result.id.videoId}}" class="r">{{result.snippet.title}}</a>
                 <div>
                     <div class="row">
                         <div class="col-md-3"><img src={{result.snippet.thumbnails.default.url}}></img>
                         </div>
                         <div class="col-md-9">
-                            <span>Published At:</span> <label>{{result.snippet.publishedAt}}</label>
+                            <span>Published At:</span> <span>{{result.snippet.publishedAt|date : "medium" }}</span>
                             <div><span>Channel Title:</span> <label>{{result.channelTitle}}</label></div>
                             <div><span>Title:</span> <label>{{result.snippet.title}}</label></div>
                         </div>

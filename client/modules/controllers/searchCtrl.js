@@ -13,20 +13,21 @@ angular.module('searchCtrl', [])
 				function (data) {
 					
 					$scope.loading = false;
-					$scope.searchresult = data;
+					$scope.searchresult = _.sortBy(data.items, 'snippet.title');;
 				}
 			);
 			Todos.getGooglebookdata(q).success(
 				function (data) {
 					
 					$scope.loading = false;
-					$scope.bookresult = data;
+					$scope.bookresult = _.sortBy(data, 'title');;
 				}
 			);
 
 		}
 		$scope.reset = function(){
-				$("#result").html("");
+				$scope.bookresult={};
+				$scope.searchresult = {};
 				 $('#search').val('');
 		}
 
