@@ -1,5 +1,5 @@
 // set up ======================================================================
-var staticdir = process.env.NODE_ENV === 'develop' ? 'dist.dev' : 'dist.prod';
+var staticdir = 'dist.dev' ;
 
 var express = require('express');
 var expressSession = require('express-session');
