@@ -66,5 +66,9 @@
   "devDependencies": {
     "gulp": "~3.9.1",
     "uglify-save-license": "~0.4.1"
-  }
+  },
+  "scripts": {
+  "start": "node server.js",
+  "postinstall": "gulp web-dev"
+}
 }
