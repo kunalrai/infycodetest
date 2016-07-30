@@ -1,1 +1,1 @@
-web: node node_modules/gulp/bin/gulp web-dev
+web: gulp web-dev
