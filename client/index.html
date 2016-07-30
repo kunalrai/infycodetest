@@ -1,0 +1,99 @@
+<!doctype html>
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="search">
+
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Optimize mobile viewport -->
+    <title>Common Search Platform</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <!-- SCROLLS -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <!-- SPELLS -->
+    <!-- bower:css -->
+    <!-- endinject -->
+    <!-- inject:css -->
+    <!-- endinject -->
+
+    <!-- SPELLS -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+
+</head>
+<!-- SET THE CONTROLLER -->
+
+<body>
+    <!-- HEADER -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Kunal Search Engine</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a ui-sref="home">Home</a></li>
+                    <li>
+                        <a ui-sref="about">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a ui-sref="contactus">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div ui-view></div>
+    <div class="all-bottom">
+        <div class="text-center text-muted">
+            <p>A demo by <a href="#">Kunal Rai</a>.</p>
+            <p>download source <a href="https://github.com/kunalrai/infycodetest">here</a>.</p>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Powered by &copy; Google 2016</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+    </div>
+    <div data-growl=""></div>
+
+
+    <!-- bower:js -->
+    <!-- endinject -->
+    <!-- inject:js -->
+    <!-- endinject -->
+
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+</body>
+
+</html>
