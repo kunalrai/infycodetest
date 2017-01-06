@@ -10,6 +10,8 @@ var port = process.env.PORT || 8080; 				// set the port
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+var server = require('http').createServer(app);
+var io = require('socket.io')(server);
 
 
 app.use(express.static(__dirname + '/' + staticdir));
