@@ -48,7 +48,7 @@
     "kue": "~0.10.5",
     "main-bower-files": "^2.5.0",
     "method-override": "^2.1.2",
-    "mongoose": "4.3.1",
+    "mongoose": "5.13.20",
     "morgan": "^1.7.0",
     "multer": "~1.1.0",
     "node-uuid": ">= 1.4.1",
